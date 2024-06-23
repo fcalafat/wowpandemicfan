@@ -69,6 +69,12 @@ class GridEditor {
         }
     }
 
+    displayAll(configs, addFn) {
+        for (let i = 0; i < configs.length; i++) {
+            addFn(i, this.element.querySelectorAll('.hover-div')[this.displayIdx++]);
+        }
+    }
+
     displayRandom(configs, addFn) {
         if (this.isFull()) return;
         const id = Math.floor(Math.random() * configs.length);

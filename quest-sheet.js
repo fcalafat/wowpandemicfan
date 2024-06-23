@@ -1,6 +1,6 @@
 const questConfigs = [
     {
-        "location": "Loge de Pinambre",
+        "location": "Loge Ambrepine",
         "effect": "Tant que cette quête est active, tous les héros ont -✊🏼 lorsqu'ils se reposent.",
         "damage": "2",
         "bossName": "Réapprovisionner le Magasin",
@@ -187,9 +187,7 @@ const questConfigs = [
         "bossImageSize": "96%"
     },
     {
-        "location": "Temple
-
- de la Lune",
+        "location": "Temple de la Lune",
         "effect": "Pendant les actions de quête ici, tous les autres héros perdent 1 point de vie par ✊🏼 et 🛡️ obtenus.",
         "damage": "2",
         "bossName": "Blaumeux",
@@ -377,7 +375,7 @@ window.addEventListener('load', function() {
     );
     grid.enableEdition();
     grid.displayFromUrl('quests', questConfigs, 'location', addQuest);
-    grid.displayFromUrl('rewards', rewardCardConfigs, 'name', addRewardCard);
+    grid.displayAll(questConfigs, addQuest);
     if (grid.isEmpty()) {
         grid.displayRandom(questConfigs, addQuest);
         grid.displayRandom(rewardCardConfigs, addRewardCard);
